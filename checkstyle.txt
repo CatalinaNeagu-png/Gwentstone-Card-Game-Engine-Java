@@ -1,2 +1,5 @@
 Starting audit...
+[ERROR] C:\Users\Catalina N\Desktop\ANI POLI\ANUL 2\POO\Tema1POO\.\src\main\java\org\poo\main\Main.java:10:8: Unused import - org.poo.game.Game. [UnusedImports]
+[ERROR] C:\Users\Catalina N\Desktop\ANI POLI\ANUL 2\POO\Tema1POO\.\src\main\java\org\poo\main\Main.java:118: Line is longer than 100 characters (found 102). [LineLength]
 Audit done.
+Checkstyle ends with 2 errors.
