@@ -3,6 +3,7 @@ package fileio;
 import java.util.ArrayList;
 
 public final class DecksInput {
+
     private int nrCardsInDeck;
     private int nrDecks;
     private ArrayList<ArrayList<CardInput>> decks;

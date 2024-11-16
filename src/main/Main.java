@@ -1,11 +1,13 @@
 package main;
 
+import game.Game;
 import checker.Checker;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import checker.CheckerConstants;
+import fileio.GameInput;
 import fileio.Input;
 
 import java.io.File;
@@ -88,7 +90,39 @@ public final class Main {
          *
          */
 
+
+        for (GameInput game : inputData.getGames()) {
+            Game newGame = getGame(game, inputData, output);
+            newGame.makeActions(game.getActions());
+
+            if (newGame.getPlayerOne().getWins() != 0) {
+                winsOne++;
+            } else if (newGame.getPlayerTwo().getWins() != 0) {
+                winsTwo++;
+            }
+        }
+
+        winsOne = 0;
+        winsTwo = 0;
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
     }
+
+    /**
+     * @param game the game to be played
+     * @param inputData the input data
+     * @param output the output array
+     * @return the game
+     */
+    private static Game getGame(final GameInput game, final Input inputData,
+                                final ArrayNode output) {
+        Game newGame = new Game(inputData, game, game.getActions(), output);
+        newGame.startGame();
+        newGame.setPlayerWins(winsOne, winsTwo);
+        return newGame;
+    }
+
+    private static int winsOne = 0;
+    private static int winsTwo = 0;
+
 }
