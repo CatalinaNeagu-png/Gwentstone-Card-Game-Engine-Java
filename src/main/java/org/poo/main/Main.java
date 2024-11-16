@@ -7,7 +7,6 @@ import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
 import org.poo.fileio.GameInput;
 import org.poo.fileio.Input;
-import org.poo.game.Game;
 
 import java.io.File;
 import java.io.IOException;
@@ -123,4 +122,5 @@ public final class Main {
 
     private static int winsOne = 0;
     private static int winsTwo = 0;
+    //con los terroristas
 }
