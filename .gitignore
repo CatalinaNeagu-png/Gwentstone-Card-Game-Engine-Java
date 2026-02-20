@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+*.zip
+*.txt
+*.log
+.idea/
+*.iml
+*.class

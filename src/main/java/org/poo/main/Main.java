@@ -122,5 +122,4 @@ public final class Main {
 
     private static int winsOne = 0;
     private static int winsTwo = 0;
-    //con los terroristas
 }
