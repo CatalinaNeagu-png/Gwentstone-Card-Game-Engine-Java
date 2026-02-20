@@ -2,6 +2,13 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+*.zip
+*.txt
+*.log
+.idea/
+*.iml
+*.class
+*.xml
 
 ### Eclipse ###
 .apt_generated
@@ -27,9 +34,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-*.zip
-*.txt
-*.log
-.idea/
-*.iml
-*.class
